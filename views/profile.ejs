@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Safari Details</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="w-full min-h-screen sm:bg-[#F3F4F6] bg-zinc-800  text-white py-5 relative   ">
+
+      <div class="flex items-center justify-evenly">
+        <div id="alluser" class=" cursor-pointer ">
+            <a class="bg-green-400 px-3 py-2  rounded-lg" href="/read">All Details</a>
+          
+          </div>
+          <div class="">
+            <a class="bg-red-500  rounded-md px-3 py-2 text-sm inline-block" href="/logout">Logout</a>
+        </div>
+      </div>
+    
+
+        <h1 class=" text-2xl text-center sm:mt-0 mt-20 sm:text-black ">Create Safari</h1>
+
+        <div class="w-full sm:flex sm:items-center sm:justify-center sm:text-black ">
+
+            <form class="p-20 sm:inline-block  flex  flex-col gap-6   items-center" action="/create" method="post">
+
+                 <div class="flex flex-wrap items-center justify-center gap-5">
+                    <label class="text-[22px] sm:ml-20   sm:mr-4" for="">Check IN</label>
+                    <input class="text-black px-6 py-2 sm:mr-4 rounded-lg outline-none" type="date" name="checkin">
+    
+                    <label class="text-[22px] sm:mr-4" for="">Check OUT</label>
+                    <input class="text-black px-6 py-2 sm:mr-4 rounded-lg outline-none" type="date" name="checkout">
+                 </div>
+               
+
+                <div class="mt-10 flex justify-center gap-6 flex-wrap  ">
+                    <input class="px-6 py-2 border-2 border-zinc-400 outline-none rounded-lg bg-transparent" type="text"
+                        placeholder="Place" name="place" />
+
+                    <label class="text-[22px] px-6 py-2 sm:mr-4" for="zone">Zone</label>
+
+                    <select class="px-6 py-2 border-2 border-zinc-400 outline-none rounded-lg  text-black" 
+                        name="zone" id="zone">
+                        <option value="Bijrani">Bijrani</option>
+                        <option value="Dhela">Dhela</option>
+                        <option value="Jhirna">Jhirna</option>
+                        <option value="Durga Devi">Durga Devi</option>
+                        <option value="Garjia">Garjia</option>
+                        <option value="Phato">Phato</option>
+                        <option value="Dhikala">Dhikala</option>
+                        <option value="Gairal">Gairal</option>
+                        <option value="Sarpduli">Sarpduli</option>
+                        <option value="Sultan">Sultan</option>
+                        <option value="Loghut">Loghut</option>
+                    </select>
+                    <label class="text-[22px] px-6 py-2 sm:mr-4" for="zone">Day</label>
+
+                    <select class="px-6 py-2 border-2 border-zinc-400 outline-none rounded-lg  text-black" 
+                        name="day" id="day">
+                        <option value="Morning">Morning</option>
+                        <option value="Afternoon">Afternoon</option>
+                        <option value="Night Stay">Night Stay</option>
+                        
+                    </select>
+                   
+                    
+                    
+                </div>
+
+                <div class=" mt-10 flex flex-wrap gap-5" >
+                    <input class="px-6 py-2 border-2 border-zinc-400 outline-none rounded-lg bg-transparent" type="text"
+                    placeholder="Gypsy Number" name="gypsynumber" />
+
+                    <input class="px-6 py-2 border-2 border-zinc-400 outline-none rounded-lg bg-transparent" type="text"
+                    placeholder="Driver" name="driver" />
+                   
+
+                    <input class="px-6 py-2 border-2 border-zinc-400 outline-none rounded-lg bg-transparent" type="text"
+                    placeholder="Gypsy By" name="gypsyby" />
+
+                    <input class="px-6 py-2 border-2 border-zinc-400 outline-none rounded-lg bg-transparent" type="number"
+                placeholder="Gypsy Payment" name="gypsypayment" />
+              
+                </div>
+
+                <div class=" mt-10 sm:px-20 flex flex-wrap gap-5" >
+                  
+
+                    
+
+                    <input class="px-6 py-2 border-2 border-zinc-400 outline-none rounded-lg bg-transparent" type="number"
+                placeholder="Collection" name="collection" />
+
+                <input class="px-6 py-2 border-2 border-zinc-400 outline-none rounded-lg bg-transparent" type="number"
+                placeholder="Expense" name="expense" />
+
+                
+                <input class="px-6 py-2 border-2 border-zinc-400 outline-none rounded-lg bg-transparent" type="number"
+                placeholder="Petrol" name="petrol" />
+                </div>
+
+                <div class="mt-10 flex items-center justify-center">
+                    <input
+                class="px-2 py-2 bg-blue-500 rounded-lg cursor-pointer"
+                type="submit"
+                value="Submit Details" />
+              
+                </div>
+               
+
+            </form>
+
+        </div>
+
+      
+
+
+    </div>
+    </div>
+  
+    <script src="/javascripts/script.js"></script>
+</body>
+
+</html>

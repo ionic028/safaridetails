@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport " content="width=device-width, initial-scale=1.0" />
+    <title>Gypsy Details</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 p-4">
+
+    <div class="w-full h-full mx-auto flex flex-wrap">
+
+        <div class="px-20">
+            <div class="nav absolute right-20 mt-2 cursor-pointer">
+                <a class="px-3 py-2 bg-blue-400 rounded-lg" href="/profile">Create Details</a>
+            </div>
+        
+            <h1 class="text-2xl font-bold mb-4">Gypsy Details</h1>
+        </div>
+
+
+
+
+        <table class="min-w-full divide-y divide-gray-200 shadow overflow-hidden sm:rounded-lg">
+            <thead class="bg-gray-50">
+                <tr>
+                    <th scope="col"
+                        class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Check In
+                    </th>
+                    <th scope="col"
+                        class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Check Out
+                    </th>
+                    <th scope="col"
+                        class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Place
+                    </th>
+                    <th scope="col"
+                        class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Zone
+                    </th>
+                    <th scope="col"
+                        class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Day
+                    </th>
+                    <th scope="col"
+                        class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Gypsy No
+                    </th>
+                    <th scope="col"
+                        class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Driver
+                    </th>
+                    <th scope="col"
+                        class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Gypsy By
+                    </th>
+                    <th scope="col"
+                        class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        GPay
+                    </th>
+                    <th scope="col"
+                        class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Collection
+                    </th>
+                    <th scope="col"
+                        class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Expense
+                    </th>
+                    <th scope="col"
+                        class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Petrol
+                    </th>
+                </tr>
+            </thead>
+            <%=users.name %>
+            
+            <% users.posts.forEach(function(user) { %>
+                 
+                <tbody class="bg-white divide-y divide-gray-200">
+                    <!-- Sample data -->
+                    <tr>
+                        <td class="px-4 py-4 whitespace-nowrap">
+                            <%=user.checkin%>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap">
+                            <%=user.checkout%>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap">
+                            <%=user.place%>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap">
+                            <%=user.zone %>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap">
+                            <%=user.day %>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap">
+                            <%=user.gypsynumber %>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap">
+                            <%=user.driver %>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap">
+                            <%=user.gypsyby %>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap">
+                            <%=user.gypsypayment %>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap">
+                            <%=user.collection %>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap">
+                            <%=user.expense %>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap">
+                            <%=user.petrol %>
+                        </td>
+                        <td class="px-4 py-4 whitespace-nowrap">
+                            <a href="/edit/<%= user._id%>" class="text-indigo-600 hover:text-indigo-900 mr-2">Edit</a>
+                            <a href="/delete/<%=user._id%>" class="text-red-600 hover:text-red-900">Delete</a>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+
+
+
+
+
+                <% } ) %>
+
+        </table>
+
+
+
+
+
+
+    </div>
+
+    </div>
+</body>
+
+</html>
